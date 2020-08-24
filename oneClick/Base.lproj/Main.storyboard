@@ -683,15 +683,26 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="oneClick" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
+                <viewController storyboardIdentifier="ViewController" id="XfG-lQ-9wD" customClass="ViewController" customModule="oneClick" customModuleProvider="target" sceneMemberID="viewController">
+                    <textField key="view" focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="yEG-Dd-mWp">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" focusRingType="none" alignment="left" placeholderString="Write something" drawsBackground="YES" id="f4V-cd-djj">
+                            <font key="font" size="13" name="Monaco"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <action selector="saveText:" target="XfG-lQ-9wD" id="tZy-SQ-yXx"/>
+                        </connections>
+                    </textField>
+                    <connections>
+                        <outlet property="textField" destination="yEG-Dd-mWp" id="8sb-lS-XJS"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="221"/>
+            <point key="canvasLocation" x="0.0" y="237"/>
         </scene>
     </scenes>
 </document>

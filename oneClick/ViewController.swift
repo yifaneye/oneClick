@@ -10,10 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet var textField: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let text = UserDefaults.standard.string(forKey: "text")
+        textField.stringValue = text ?? ""
     }
 
     override var representedObject: Any? {
@@ -21,7 +25,11 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
+    
+    @IBAction func saveText(_ sender: Any) {
+        let text = textField.stringValue
+        UserDefaults.standard.set(text, forKey: "text")
+    }
 
 }
 
