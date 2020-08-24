@@ -10,7 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController, NSTextFieldDelegate {
 
-    @IBOutlet weak var textField: NSTextField!
+    @IBOutlet var textField: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()

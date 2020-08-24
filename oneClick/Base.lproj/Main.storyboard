@@ -694,7 +694,7 @@
                         </textFieldCell>
                     </textField>
                     <connections>
-                        <outlet property="textField" destination="f4V-cd-djj" id="kNB-Jp-Myb"/>
+                        <outlet property="textField" destination="yEG-Dd-mWp" id="x8s-OF-N2H"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
