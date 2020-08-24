@@ -8,9 +8,9 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextFieldDelegate {
 
-    @IBOutlet var textField: NSTextField!
+    @IBOutlet weak var textField: NSTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,17 +18,12 @@ class ViewController: NSViewController {
         // Do any additional setup after loading the view.
         let text = UserDefaults.standard.string(forKey: "text")
         textField.stringValue = text ?? ""
-    }
-
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+        textField.delegate = self
     }
     
-    @IBAction func saveText(_ sender: Any) {
-        let text = textField.stringValue
-        UserDefaults.standard.set(text, forKey: "text")
+    func controlTextDidChange(_ obj: Notification) {
+        let textField = obj.object as! NSTextField
+        UserDefaults.standard.set(textField.stringValue, forKey: "text")
     }
 
 }

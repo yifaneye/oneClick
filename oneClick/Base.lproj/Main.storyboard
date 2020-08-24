@@ -692,12 +692,9 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <connections>
-                            <action selector="saveText:" target="XfG-lQ-9wD" id="tZy-SQ-yXx"/>
-                        </connections>
                     </textField>
                     <connections>
-                        <outlet property="textField" destination="yEG-Dd-mWp" id="8sb-lS-XJS"/>
+                        <outlet property="textField" destination="f4V-cd-djj" id="kNB-Jp-Myb"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
